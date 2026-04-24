@@ -1,7 +1,7 @@
 // العد التنازلي للمناقشة
 document.addEventListener('DOMContentLoaded', function() {
     // تاريخ المناقشة: 18 فبراير 2026 الساعة 11 صباحًا
-    const discussionDate = new Date('February 18, 2026 11:00:00').getTime();
+    const discussionDate = new Date('February 18, 2027 11:00:00').getTime();
     
     // تحديث العد التنازلي كل ثانية
     const countdownTimer = setInterval(function() {
