@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دعوة مناقشة رسالة دكتوراه – محمد فرح متولي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Lateef:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+:root {
+  --bg-primary: #e8ecf5;
+  --bg-secondary: #dde3f0;
+  --bg-card: rgba(255,255,255,0.72);
+  --bg-card-solid: #f0f4fb;
+  --accent-gold: #b5870a;
+  --accent-gold-light: #d4a017;
+  --accent-rose: #c0454a;
+  --accent-teal: #1a7a6e;
+  --accent-purple: #5a3e8a;
+  --accent-blue: #2a5ea8;
+  --border-soft: rgba(181,135,10,0.28);
+  --text-dark: #1a2035;
+  --text-mid: #3a4260;
+  --text-dim: #6e7a9c;
+  --shadow-lg: 0 12px 32px -8px rgba(60,80,140,0.18);
+  --shadow-card: 0 4px 18px rgba(60,80,140,0.10);
+  --gradient-bg: linear-gradient(145deg, #dde6f5 0%, #e8edf8 40%, #f0e8f5 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.85) 0%, rgba(240,244,251,0.90) 100%);
+  --glow-gold: 0 0 14px rgba(181,135,10,0.22);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  background: var(--gradient-bg);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  font-size: 15.5px;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(90,62,138,0.06) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(26,122,110,0.05) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, rgba(181,135,10,0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+.particles-bg {
+  position: fixed; top:0; left:0; width:100%; height:100%;
+  overflow:hidden; z-index:0; pointer-events:none;
+}
+.particle {
+  position: absolute;
+  background: linear-gradient(135deg, var(--accent-gold-light), var(--accent-rose));
+  border-radius: 50%;
+  opacity: 0.05;
+  animation: float 22s infinite linear;
+}
+@keyframes float {
+  0%   { transform: translateY(100vh) rotate(0deg);   opacity:0; }
+  10%  { opacity: 0.08; }
+  90%  { opacity: 0.08; }
+  100% { transform: translateY(-10vh) rotate(360deg); opacity:0; }
+}
+.page-wrapper {
+  position: relative; z-index: 2;
+  max-width: 1100px; margin: 0 auto;
+  padding: 18px 16px 0;
+}
+
+/* ───── HEADER ───── */
+.header-bar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 28px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.82) 0%, rgba(230,238,255,0.78) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 28px;
+  border: 1.5px solid rgba(181,135,10,0.22);
+  box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.9), inset 0 -1px 0 rgba(181,135,10,0.08);
+  margin-bottom: 12px;
+}
+.uni-info .uni-name {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--accent-gold);
+  letter-spacing: 0px;
+  line-height: 1.2;
+}
+.uni-info .uni-sub {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  font-weight: 600;
+  line-height: 1.7;
+  margin-top: 2px;
+}
+.logos { display: flex; gap: 12px; align-items: center; }
+
+/* ───── HALO ANIMATION ───── */
+@keyframes haloGold {
+  0%,100% {
+    box-shadow: 0 0 0 3px rgba(181,135,10,0.15), 0 0 12px rgba(181,135,10,0.25);
+  }
+  33% {
+    box-shadow: 0 0 0 4px rgba(192,69,74,0.18), 0 0 18px rgba(192,69,74,0.28);
+  }
+  66% {
+    box-shadow: 0 0 0 3px rgba(26,122,110,0.15), 0 0 14px rgba(26,122,110,0.22);
+  }
+}
+
+.logo-circle {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(255,255,255,0.7);
+  border: 2px solid rgba(181,135,10,0.4);
+  overflow: hidden; position: relative;
+  animation: haloGold 4s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+.logo-circle:nth-child(2) { animation-delay: 1.3s; }
+.logo-circle:nth-child(3) { animation-delay: 2.6s; }
+.logo-circle:hover { transform: scale(1.07); }
+.logo-circle img { width:100%; height:100%; object-fit:cover; }
+.logo-circle .shine {
+  position:absolute; inset:0; border-radius:50%;
+  background: conic-gradient(transparent 0deg, rgba(255,255,255,0.25) 60deg, transparent 120deg);
+  animation: shineRotate 6s linear infinite;
+}
+@keyframes shineRotate { 100%{ transform:rotate(360deg); } }
+
+.invite-title-wrap { text-align:center; padding:12px 0 6px; }
+.invite-img { max-width: 200px; width:88%; filter: drop-shadow(0 2px 8px rgba(181,135,10,0.25)); }
+
+/* ───── ANNOUNCEMENT ───── */
+.announcement {
+  background: linear-gradient(108deg, rgba(181,135,10,0.06), rgba(90,62,138,0.04));
+  border: 1.5px solid rgba(181,135,10,0.18);
+  border-radius: 22px;
+  padding: 16px 24px;
+  text-align: center;
+  margin: 10px 0;
+  backdrop-filter: blur(8px);
+}
+.announcement p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--text-dark);
+}
+.announcement p strong { color: var(--accent-gold); font-weight:700; }
+
+/* ───── THESIS CARD ───── */
+.thesis-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.78) 0%, rgba(220,232,255,0.65) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 34px; padding: 26px 24px;
+  text-align: center; margin: 12px 0;
+  position: relative;
+  box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.9);
+  border: 1.5px solid rgba(181,135,10,0.20);
+}
+.thesis-card::before {
+  content:''; position:absolute; inset:0; border-radius:34px; padding:2px;
+  background: linear-gradient(130deg, rgba(181,135,10,0.5), rgba(192,69,74,0.4), rgba(90,62,138,0.35));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none;
+}
+.thesis-title {
+  font-family: 'Lateef', 'Amiri', serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+.highlight {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-rose));
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; font-weight:900;
+}
+
+/* ───── RESEARCHER ───── */
+.researcher-section { text-align:center; margin:18px 0 12px; }
+.label { font-size:0.88rem; letter-spacing:3px; color:var(--accent-teal); margin-bottom:12px; font-weight:600; }
+.researcher-card { display:inline-flex; flex-direction:column; align-items:center; gap:10px; }
+.researcher-name { font-size:1.42rem; font-weight:900; color: var(--accent-gold); white-space:nowrap; }
+
+.photo-wrap {
+  display:inline-block; border-radius:50%; border:2.5px solid var(--accent-gold);
+  overflow:hidden; animation: haloGold 4s ease-in-out infinite;
+  transition: all 0.3s; background: white;
+}
+.photo-wrap.researcher-size { width:118px; height:118px; }
+.photo-wrap.member-size    { width:92px;  height:92px;  margin-bottom:8px; }
+.photo-wrap:nth-child(odd) { animation-delay: 0.8s; }
+.photo-wrap img { width:100%; height:100%; object-fit:cover; }
+
+/* ───── SECTION HEADERS ───── */
+.section-header { text-align:center; margin:22px 0 12px; }
+.section-header h3 {
+  display:inline-block; font-size:1.05rem; font-weight:700;
+  background: rgba(181,135,10,0.10);
+  backdrop-filter:blur(4px);
+  padding:6px 26px; border-radius:60px; letter-spacing:2px;
+  color:var(--accent-gold); border:1px solid rgba(181,135,10,0.28);
+}
+
+/* ───── COMMITTEE GRID ───── */
+.committee-grid {
+  display:flex; flex-wrap:wrap; justify-content:center;
+  gap:14px; margin:10px 0;
+}
+.member-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.88) 0%, rgba(230,238,255,0.82) 100%);
+  border:1.5px solid rgba(181,135,10,0.18);
+  border-radius:26px; padding:16px 16px;
+  text-align:center; transition:all 0.3s cubic-bezier(0.2,0.9,0.4,1.1);
+  width:230px;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow: var(--shadow-card);
+}
+.member-card:hover { transform:translateY(-5px); border-color:var(--accent-rose); box-shadow:0 14px 28px -8px rgba(192,69,74,0.2); }
+.member-name    { font-weight:800; font-size:0.87rem; color:var(--text-dark); margin:8px 0 4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.member-role, .member-uni { font-size:0.74rem; color:var(--text-dim); line-height:1.5; }
+.member-role-bold { font-size:0.74rem; font-weight:700; color:var(--accent-teal); margin-top:6px; }
+
+/* ───── EVENT INFO ───── */
+.event-info-wrapper { margin:18px 0; }
+.event-info-row1, .event-info-row2 {
+  display:flex; gap:14px; justify-content:center;
+  margin-bottom:12px; flex-wrap:wrap;
+}
+.event-info-item {
+  display:flex; align-items:center; gap:12px;
+  background:rgba(255,255,255,0.72); backdrop-filter:blur(10px);
+  border:1.5px solid rgba(181,135,10,0.22); border-radius:36px;
+  padding:10px 22px; transition:all 0.2s; flex:1; min-width:0; max-width:320px;
+  box-shadow: var(--shadow-card);
+}
+.event-info-item:hover { border-color:var(--accent-rose); }
+.event-info-icon { font-size:1.5rem; flex-shrink:0; }
+.event-info-val, .event-info-val-gold { font-size:0.88rem; font-weight:600; white-space:nowrap; color: var(--text-mid); }
+.event-info-val-gold { color:var(--accent-gold); }
+.event-info-row1 .event-info-item { flex:1; max-width:220px; }
+.event-info-row2 .event-info-item { flex:1; max-width:454px; justify-content:center; }
+
+/* ───── MAP ───── */
+.map-box {
+  margin:14px 0; border-radius:26px; overflow:hidden;
+  border:1.5px solid rgba(181,135,10,0.22);
+  box-shadow: var(--shadow-lg);
+  height:200px;
+}
+.map-box iframe { width:100%; height:100%; border:0; }
+.map-label { background:rgba(240,244,251,0.92); padding:6px; font-size:0.7rem; text-align:center; color:var(--accent-gold); font-weight:600; }
+
+/* ───── COUNTDOWN ───── */
+.countdown-section {
+  background: linear-gradient(145deg, rgba(255,255,255,0.85) 0%, rgba(220,232,255,0.80) 100%);
+  backdrop-filter: blur(14px);
+  border-radius:34px; padding:20px 16px;
+  margin:18px 0; border:1.5px solid rgba(181,135,10,0.18);
+  box-shadow: var(--shadow-lg);
+}
+.countdown-grid { display:flex; justify-content:center; gap:10px; flex-wrap:nowrap; }
+.count-box {
+  background:rgba(255,255,255,0.6); border-radius:20px;
+  padding:12px 14px; min-width:78px;
+  border:1px solid rgba(192,69,74,0.22); text-align:center;
+  box-shadow: 0 2px 8px rgba(60,80,140,0.08);
+}
+.count-num {
+  font-family:'Space Grotesk',monospace; font-size:2rem; font-weight:800;
+  color: var(--accent-gold); line-height:1;
+}
+.count-label { font-size:0.67rem; color:var(--accent-teal); letter-spacing:1px; display:block; margin-top:4px; font-weight:600; }
+
+/* ───── VISITS COUNTER ───── */
+.visits-bar {
+  text-align: center;
+  padding: 12px 0;
+  margin: 14px 0 6px;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  font-weight: 600;
+}
+.visits-bar span { color: var(--accent-gold); font-weight: 800; font-size: 1rem; }
+
+/* ───── CONGRATS BOX ───── */
+.congrats-box {
+  background: linear-gradient(145deg, rgba(255,255,255,0.88) 0%, rgba(220,232,255,0.82) 100%);
+  backdrop-filter: blur(14px);
+  border-radius:34px;
+  padding:26px 22px; margin-top:22px;
+  border:1.5px solid rgba(181,135,10,0.18); box-shadow: var(--shadow-lg);
+}
+.congrats-box h4 {
+  font-size:1.35rem; text-align:center;
+  color: var(--accent-rose);
+  margin-bottom:16px; font-weight:800;
+}
+.input-row { margin-bottom:10px; }
+.input-row input, textarea#congrats-text {
+  background:rgba(255,255,255,0.75); border:1.5px solid rgba(181,135,10,0.25);
+  border-radius:22px; padding:12px 18px;
+  color: var(--text-dark); font-family:'Cairo','Tajawal',sans-serif; font-size:1rem;
+  width:100%; transition:all 0.2s;
+}
+textarea#congrats-text { min-height:100px; resize:vertical; font-size:1rem; }
+.input-row input:focus, textarea#congrats-text:focus {
+  border-color:var(--accent-rose); outline:none;
+  box-shadow:0 0 10px rgba(192,69,74,0.15);
+}
+.congrats-send-row { margin-top:10px; }
+.congrats-btn {
+  background:linear-gradient(95deg,var(--accent-gold-light),var(--accent-rose));
+  border:none; border-radius:36px; padding:13px 0;
+  font-weight:800; font-size:1.05rem; color:#fff;
+  cursor:pointer; width:100%; transition:transform 0.2s, box-shadow 0.2s;
+}
+.congrats-btn:hover { transform:scale(1.02); box-shadow:0 5px 18px rgba(192,69,74,0.3); }
+#congrats-count { font-size:.8rem;color:var(--text-dim);margin:10px 0 4px;text-align:center;font-weight:600; }
+#congrats-list { margin-top:18px; max-height:520px; overflow-y:auto; padding:2px; }
+.c-item {
+  background:rgba(255,255,255,0.7); border-radius:22px;
+  padding:14px 16px; margin-bottom:12px;
+  border-right:4px solid var(--accent-gold); transition:0.2s;
+  box-shadow: 0 2px 10px rgba(60,80,140,0.07);
+}
+.c-name  { font-weight:800; color:var(--accent-teal); margin-bottom:6px; display:block; text-align:right; font-size:0.92rem; }
+.c-name.admin-name { color: var(--accent-rose); }
+.c-text  { font-size:0.95rem; line-height:1.65; text-align:right; margin-bottom:8px; color: var(--text-dark); }
+.c-meta  { display:flex; direction:ltr; justify-content:flex-start; gap:10px; margin-bottom:2px; }
+.c-time  { font-size:0.7rem; color:var(--text-dim); }
+
+/* Like button – left aligned, below comment text */
+.c-like-row {
+  display: flex;
+  justify-content: flex-start;
+  margin: 6px 0 8px;
+}
+.c-btn-like {
+  border-radius:36px; padding:5px 14px;
+  font-size:0.72rem; font-weight:700; cursor:pointer; transition:0.2s;
+  background:rgba(181,135,10,0.08); border:1px solid rgba(181,135,10,0.3); color:var(--accent-gold);
+  display:flex; align-items:center; gap:5px; white-space:nowrap;
+}
+.c-btn-like.liked {
+  background:rgba(220,60,60,0.1); border-color:#c04; color:#c04;
+}
+.like-label { transition: opacity 0.2s; }
+.c-btn-like.liked .like-label { display:none; }
+
+.c-btns  { display:flex; gap:8px; justify-content:center; margin-top:8px; flex-wrap:wrap; }
+.c-btn-edit, .c-btn-del, .c-btn-reply {
+  border-radius:36px; padding:5px 14px;
+  font-size:0.7rem; font-weight:600; cursor:pointer; transition:0.2s; border:1px solid;
+}
+.c-btn-edit  { background:rgba(26,122,110,0.10); border-color:var(--accent-teal);  color:var(--accent-teal); }
+.c-btn-del   { background:rgba(192,69,74,0.10); border-color:var(--accent-rose);  color:var(--accent-rose); }
+.c-btn-reply { background:rgba(42,94,168,0.10); border-color:var(--accent-blue);  color:var(--accent-blue); }
+
+/* replies */
+.c-replies { margin-top:10px; padding-top:10px; border-top:1px solid rgba(181,135,10,0.15); }
+.c-reply-item {
+  background:rgba(240,244,255,0.7); border-radius:16px;
+  padding:10px 14px; margin-bottom:8px;
+  border-right:3px solid var(--accent-rose);
+}
+.c-reply-name { font-weight:800; color:var(--accent-rose); font-size:0.83rem; margin-bottom:4px; display:block; }
+.c-reply-text { font-size:0.9rem; line-height:1.6; color: var(--text-dark); }
+
+/* commenter reply button */
+.c-btn-commenter-reply {
+  border-radius:36px; padding:4px 12px;
+  font-size:0.68rem; font-weight:600; cursor:pointer; transition:0.2s;
+  background:rgba(90,62,138,0.08); border:1px solid rgba(90,62,138,0.3); color:var(--accent-purple);
+  margin-top:6px; display:inline-block;
+}
+
+/* reply input (admin) */
+.reply-input-wrap { margin-top:10px; display:flex; gap:8px; flex-direction:column; }
+.reply-textarea {
+  background:rgba(255,255,255,0.7); border:1.5px solid rgba(42,94,168,0.28);
+  border-radius:16px; padding:10px 14px;
+  color:var(--text-dark); font-family:'Cairo','Tajawal',sans-serif; font-size:0.92rem;
+  resize:vertical; min-height:70px; width:100%;
+}
+.reply-send-btn {
+  background:linear-gradient(95deg,var(--accent-blue),var(--accent-purple));
+  border:none; border-radius:36px; padding:8px 22px;
+  font-weight:700; font-size:0.88rem; color:white;
+  cursor:pointer; align-self:flex-end; transition:0.2s;
+}
+.reply-send-btn:hover { opacity:0.88; }
+
+/* commenter reply input */
+.commenter-reply-wrap { margin-top:8px; display:flex; gap:8px; flex-direction:column; }
+.commenter-reply-textarea {
+  background:rgba(255,255,255,0.7); border:1.5px solid rgba(90,62,138,0.25);
+  border-radius:14px; padding:8px 12px;
+  color:var(--text-dark); font-family:'Cairo','Tajawal',sans-serif; font-size:0.88rem;
+  resize:vertical; min-height:60px; width:100%;
+}
+.commenter-reply-send {
+  background:linear-gradient(95deg,var(--accent-purple),var(--accent-blue));
+  border:none; border-radius:36px; padding:6px 18px;
+  font-weight:700; font-size:0.82rem; color:white;
+  cursor:pointer; align-self:flex-end; transition:0.2s;
+}
+
+/* ───── SHARE ───── */
+.share-section { text-align:center; margin:26px 0 14px; }
+.share-title { font-size:0.88rem; letter-spacing:3px; color:var(--accent-gold); margin-bottom:16px; font-weight:700; }
+.share-buttons { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+.share-btn {
+  width:54px; height:54px;
+  background:rgba(255,255,255,0.72); backdrop-filter:blur(4px);
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  transition:0.3s; border:1.5px solid rgba(181,135,10,0.25);
+  text-decoration:none; box-shadow: var(--shadow-card);
+}
+.share-btn img { width:28px; height:28px; opacity:0.75; }
+.share-btn:hover { transform:translateY(-5px) scale(1.1); background:var(--accent-gold-light); border-color:var(--accent-gold); }
+.share-btn:hover img { opacity:1; }
+
+/* ───── ADMIN ───── */
+.admin-wrap { text-align:center; margin:20px 0 4px; opacity: 0.35; transition: opacity 0.3s; }
+.admin-wrap:hover { opacity: 0.75; }
+.footer-bar {
+  text-align:center; padding:16px 0 12px;
+  border-top:1px solid rgba(181,135,10,0.18); margin-top:22px;
+}
+.copy { font-size:0.7rem; color:var(--text-dim); }
+.copy span { color:var(--accent-rose); font-weight:700; }
+.footer-contact { margin-top:8px; }
+.footer-contact .contact-label { font-size:0.72rem; color:var(--text-dim); margin-bottom:4px; display:inline; margin-left:6px; }
+.footer-contact a.fb-link {
+  color: var(--accent-blue);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(42,94,168,0.3);
+  transition: 0.2s;
+}
+.footer-contact a.fb-link:hover { color: var(--accent-rose); border-color: var(--accent-rose); }
+
+@media(max-width:768px){
+  .header-bar { flex-direction:column; gap:14px; text-align:center; }
+  .thesis-title { font-size:1.45rem; }
+  .committee-grid { gap:10px; }
+  .event-info-item { padding:8px 14px; }
+  .event-info-row1 .event-info-item, .event-info-row2 .event-info-item { max-width:100%; }
+  .count-box { min-width:62px; padding:9px 10px; }
+  .count-num { font-size:1.5rem; }
+  .countdown-grid { gap:7px; }
+  .member-name { font-size:0.84rem; }
+  .member-card { width:210px; }
+  .researcher-name { font-size:1.2rem; }
+}
+</style>
+</head>
+<body>
+<div class="particles-bg" id="particles-bg"></div>
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <div class="header-bar">
+    <div class="uni-info">
+      <div class="uni-name">جامعة الأزهر</div>
+      <div class="uni-sub">كلية التربية بنين بالقاهرة<br>قسم أصول التربية</div>
+    </div>
+    <div class="logos">
+      <div class="logo-circle"><img src="images/uni_logo.png" alt="جامعة الأزهر"><div class="shine"></div></div>
+      <div class="logo-circle"><img src="images/college_logo.png" alt="كلية التربية"><div class="shine"></div></div>
+      <div class="logo-circle"><img src="images/dept_logo.png" alt="قسم أصول التربية"><div class="shine"></div></div>
+    </div>
+  </div>
+
+  <div class="invite-title-wrap">
+    <img src="images/invite_text.png" alt="دعوة" class="invite-img">
+  </div>
+
+  <div class="announcement">
+    <p>يسر قسم أصول التربية بكلية التربية بنين بالقاهرة – جامعة الأزهر أن يدعوكم لحضور مناقشة رسالة العالمية <strong>دكتوراه الفلسفة</strong> في التربية، تخصص <strong style="color:var(--accent-teal);">(أصول التربية)</strong>، وعنوانها:</p>
+  </div>
+
+  <div class="thesis-card">
+    <div class="thesis-title">
+      استراتيجية مقترحة لتوظيف
+      <br>
+      <span class="highlight">روبوتات المحادثة Chatbots</span>
+      <br>
+      في التعليم الجامعي بمصر من منظور
+      <br>
+      <span class="highlight">فلسفة الذكاء الاصطناعي المسؤول</span>
+    </div>
+  </div>
+
+  <div class="researcher-section">
+    <div class="label">المقدمة من الباحث/</div>
+    <div class="researcher-card">
+      <div class="photo-wrap researcher-size">
+        <img src="images/researcher1.png" alt="محمد فرح">
+      </div>
+      <div class="researcher-name">محمد فرح محمد متولي</div>
+      <div style="font-size:0.82rem;color:var(--text-dim);text-align:center;line-height:1.6;">المدرس المساعد بقسم أصول التربية<br>كلية التربية بنين بالقاهرة - جامعة الأزهر</div>
+    </div>
+  </div>
+
+  <!-- لجنة الإشراف -->
+  <div class="section-header"><h3>◈ لجنة الإشراف ◈</h3></div>
+  <div class="committee-grid">
+    <div class="member-card"><div class="photo-wrap member-size"><img src="images/per1.png" alt="مشرف"></div><div class="member-name">أ.د/ أحمد سمير فوزي عبد الله</div><div class="member-role">أستاذ أصول التربية</div><div class="member-uni">كلية التربية بنين بالقاهرة<br>جامعة الأزهر</div></div>
+    <div class="member-card"><div class="photo-wrap member-size"><img src="images/per2.png" alt="مشرف"></div><div class="member-name">د/ ياسر علي علي عبد الغني</div><div class="member-role">أستاذ تكنولوجيا التعليم المساعد</div><div class="member-uni">كلية التربية بنين بالقاهرة<br>جامعة الأزهر</div></div>
+    <div class="member-card"><div class="photo-wrap member-size"><img src="images/per3.png" alt="مشرف"></div><div class="member-name">د/ جمال عبد الحميد أحمد عبد السميع</div><div class="member-role">مدرس أصول التربية</div><div class="member-uni">كلية التربية بنين بالقاهرة<br>جامعة الأزهر</div></div>
+  </div>
+
+  <!-- لجنة المناقشة -->
+  <div class="section-header"><h3>◈ لجنة المناقشة والحكم ◈</h3></div>
+  <div class="committee-grid">
+    <div class="member-card"><div class="photo-wrap member-size"><img src="images/per1.png" alt="مناقش"></div><div class="member-name">أ.د/ أحمد سمير فوزي عبد الله</div><div class="member-role">أستاذ أصول التربية</div><div class="member-uni">كلية التربية بنين بالقاهرة<br>جامعة الأزهر</div><div class="member-role-bold">(مشرفًا ورئيسًا)</div></div>
+    <div class="member-card"><div class="photo-wrap member-size"><img src="images/perso1.png" alt="مناقش"></div><div class="member-name">أ.د/ محمود عبد اللطيف السيد</div><div class="member-role">أستاذ أصول التربية</div><div class="member-uni">كلية التربية بنين بالقاهرة<br>جامعة الأزهر</div><div class="member-role-bold">(مشرفًا ورئيسًا)</div></div>
+    <div class="member-card"><div class="photo-wrap member-size"><img src="images/perso2.png" alt="مناقش"></div><div class="member-name">أ.د/ نسمة محمد عبد السلام</div><div class="member-role">أستاذ أصول التربية</div><div class="member-uni">كلية التربية<br>جامعة عين شمس</div><div class="member-role-bold">(مشرفًا ورئيسًا)</div></div>
+    <div class="member-card"><div class="photo-wrap member-size"><img src="images/per2.png" alt="مناقش"></div><div class="member-name">د/ ياسر علي علي عبد الغني</div><div class="member-role">أستاذ تكنولوجيا التعليم المساعد</div><div class="member-uni">كلية التربية بنين بالقاهرة<br>جامعة الأزهر</div><div class="member-role-bold">(مشرفًا ورئيسًا)</div></div>
+  </div>
+
+  <!-- موعد المناقشة -->
+  <div class="section-header"><h3>◈ موعد المناقشة وموقعها ◈</h3></div>
+  <div class="event-info-wrapper">
+    <div class="event-info-row1">
+      <div class="event-info-item">
+        <div class="event-info-icon">📅</div>
+        <div><span class="event-info-val">يوم الخميس</span><br><span class="event-info-val">17/10/2026</span></div>
+      </div>
+      <div class="event-info-item">
+        <div class="event-info-icon">🕛</div>
+        <div><span class="event-info-val">الساعة</span><br><span class="event-info-val">12:00 ظهرًا</span></div>
+      </div>
+    </div>
+    <div class="event-info-row2">
+      <div class="event-info-item">
+        <div class="event-info-icon"><i class="fas fa-map-marker-alt" style="color:var(--accent-rose);"></i></div>
+        <div><span class="event-info-val-gold">كلية التربية بنين بالقاهرة - جامعة الأزهر</span><br><span class="event-info-val">قاعة المناقشات (أ)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-box">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.158757263557!2d31.31253552474634!3d30.060983517787463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e535c536a25%3A0xe8046d566ecd3e58!2z2YPZhNmK2Kkg2KfZhNiq2LHYqNmK2Kkg2KjZhtmK2YYg2KzYp9mF2LnYqSDYp9mE2KPYstmH2LE!5e0!3m2!1sar!2seg!4v1777125767618!5m2!1sar!2seg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-label">📍 كلية التربية بنين بالقاهرة – جامعة الأزهر</div>
+  </div>
+
+  <!-- العد التنازلي -->
+  <div class="section-header"><h3>◈ العد التنازلي للمناقشة ◈</h3></div>
+  <div class="countdown-section">
+    <div id="countdown-done" style="display:none;text-align:center;padding:12px;color:var(--accent-gold);font-weight:700;">تمت المناقشة بحمد الله وتوفيقه 🎓</div>
+    <div id="countdown-live">
+      <div class="countdown-grid">
+        <div class="count-box"><span class="count-num" id="days">00</span><span class="count-label">أيام</span></div>
+        <div class="count-box"><span class="count-num" id="hours">00</span><span class="count-label">ساعة</span></div>
+        <div class="count-box"><span class="count-num" id="minutes">00</span><span class="count-label">دقيقة</span></div>
+        <div class="count-box"><span class="count-num" id="seconds">00</span><span class="count-label">ثانية</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- التهنئات -->
+  <div class="congrats-box">
+    <h4>◈ اكتب تهنئة للباحث ◈</h4>
+    <div class="input-row"><input id="congrats-name" type="text" placeholder="اسمك.. (اختياري)"></div>
+    <textarea id="congrats-text" placeholder="اكتب تهنئتك هنا..."></textarea>
+    <div class="congrats-send-row"><button class="congrats-btn" onclick="submitCongrats()">إرسال</button></div>
+    <div id="congrats-count"></div>
+    <div id="congrats-list"></div>
+  </div>
+
+  <!-- عدد الزيارات -->
+  <div class="visits-bar">
+    👁️ عدد الزيارات: <span id="visits-count">—</span>
+  </div>
+
+  <!-- مشاركة -->
+  <div class="share-section">
+    <div class="share-title">◈ شارك الدعوة ◈</div>
+    <div class="share-buttons">
+      <a class="share-btn" href="#" onclick="shareOn('facebook');return false;"><img src="images/facebook.png" alt="Facebook"></a>
+      <a class="share-btn" href="#" onclick="shareOn('whatsapp');return false;"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+      <a class="share-btn" href="#" onclick="shareOn('x');return false;"><img src="images/x.png" alt="X"></a>
+      <a class="share-btn" href="#" onclick="shareOn('telegram');return false;"><img src="images/telegram.png" alt="Telegram"></a>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="copy">جميع حقوق الفكرة والبرمجة محفوظة © <span>محمد فرح 2026</span></div>
+    <div class="footer-contact" style="margin-top:8px;">
+      <span class="contact-label">للتواصل:</span>
+      <a href="https://www.facebook.com/mfarahmetwally" target="_blank" rel="noopener" class="fb-link">Facebook</a>
+    </div>
+  </div>
+
+  <!-- Admin – آخر عنصر، خافت -->
+  <div class="admin-wrap">
+    <div id="admin-status" style="margin-bottom:6px;font-size:.78rem;"></div>
+    <button id="admin-toggle-btn" onclick="showAdminLogin()" style="background:transparent;border:1px solid rgba(181,135,10,0.25);color:var(--accent-gold);border-radius:36px;padding:4px 12px;font-size:.65rem;cursor:pointer;opacity:0.7;">⚙️ إدارة</button>
+    <div id="admin-login-box" style="display:none;margin-top:10px;background:rgba(255,255,255,0.88);border:1px solid var(--accent-gold);border-radius:22px;padding:16px;max-width:300px;margin-left:auto;margin-right:auto;box-shadow:var(--shadow-card);">
+      <p style="font-size:.83rem;color:var(--accent-teal);margin-bottom:10px;font-weight:700;">🔐 دخول المدير</p>
+      <input id="admin-pass-input" type="password" placeholder="كلمة السر..." onkeydown="if(event.key==='Enter') adminLogin()" style="width:100%;background:rgba(240,244,251,0.8);border:1px solid rgba(181,135,10,0.3);border-radius:36px;padding:9px 14px;color:var(--text-dark);margin-bottom:10px;font-family:Cairo,Tajawal,sans-serif;">
+      <p id="admin-pass-error" style="display:none;color:#c0454a;font-size:.73rem;margin-bottom:8px;">❌ كلمة السر غير صحيحة</p>
+      <div style="display:flex;gap:10px;">
+        <button onclick="adminLogin()" style="flex:1;background:linear-gradient(95deg,var(--accent-gold-light),var(--accent-rose));color:#fff;border:none;border-radius:36px;padding:8px;font-weight:700;cursor:pointer;font-family:Cairo,Tajawal,sans-serif;">دخول</button>
+        <button onclick="cancelAdminLogin()" style="flex:1;background:rgba(60,80,140,0.06);color:var(--text-dim);border-radius:36px;padding:8px;cursor:pointer;border:none;font-family:Cairo,Tajawal,sans-serif;">إلغاء</button>
+      </div>
+    </div>
+  </div>
+  <div style="padding-bottom:28px;"></div>
+
+</div>
+
+<!-- Firebase Module Script -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, push, onValue, remove, update, get, set, increment } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA5xYXrZrrwA6ws8WRyMr2dIHXlWBVn3FE",
+    authDomain: "aaaaaa-5b453.firebaseapp.com",
+    databaseURL: "https://aaaaaa-5b453-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "aaaaaa-5b453",
+    storageBucket: "aaaaaa-5b453.firebasestorage.app",
+    messagingSenderId: "722031681124",
+    appId: "1:722031681124:web:0d45ca14b0413d9954c971"
+  };
+
+  const ADMIN_PASSWORD = "333555";
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const congratsRef = ref(db, "congrats");
+  const visitsRef = ref(db, "visits");
+
+  // ── Visits counter ──
+  (function() {
+    const visitKey = "visit_counted_v1";
+    if (!sessionStorage.getItem(visitKey)) {
+      sessionStorage.setItem(visitKey, "1");
+      // increment in firebase
+      get(visitsRef).then(snap => {
+        const current = snap.exists() ? (snap.val() || 0) : 0;
+        set(visitsRef, current + 1);
+      });
+    }
+    // Listen for count
+    onValue(visitsRef, snap => {
+      const el = document.getElementById("visits-count");
+      if (el) el.textContent = snap.exists() ? snap.val().toLocaleString("ar-EG") : "0";
+    });
+  })();
+
+  let myToken = localStorage.getItem("congrats_token");
+  if (!myToken) {
+    myToken = "tk_" + Math.random().toString(36).slice(2) + Date.now();
+    localStorage.setItem("congrats_token", myToken);
+  }
+
+  function getLikedSet() {
+    try { return new Set(JSON.parse(localStorage.getItem("liked_ids") || "[]")); }
+    catch(e) { return new Set(); }
+  }
+  function saveLikedSet(s) { localStorage.setItem("liked_ids", JSON.stringify([...s])); }
+
+  let isAdmin = sessionStorage.getItem("admin_logged") === "yes";
+
+  /* ── Submit congrats ── */
+  window.submitCongrats = function() {
+    const name = document.getElementById("congrats-name").value.trim() || "زائر";
+    const text = document.getElementById("congrats-text").value.trim();
+    if (!text) { alert("من فضلك اكتب التهنئة"); return; }
+    push(congratsRef, { name, text, time: new Date().toLocaleString("ar-EG"), ts: Date.now(), token: myToken, likes: 0 });
+    document.getElementById("congrats-name").value = "";
+    document.getElementById("congrats-text").value = "";
+  };
+
+  /* ── Delete ── */
+  window.deleteCongrats = function(id, token) {
+    if (token !== myToken && !isAdmin) return;
+    if (confirm("هل تريد حذف هذه التهنئة؟")) remove(ref(db, "congrats/" + id));
+  };
+
+  /* ── Edit ── */
+  window.editCongrats = function(id, oldText, token) {
+    if (token !== myToken) return;
+    const overlay = document.createElement("div");
+    overlay.style.cssText = "position:fixed;inset:0;background:rgba(200,210,240,0.7);backdrop-filter:blur(8px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;";
+    const box = document.createElement("div");
+    box.style.cssText = "background:rgba(255,255,255,0.95);border:1.5px solid #b5870a;border-radius:26px;padding:22px;width:100%;max-width:500px;font-family:Cairo,Tajawal,sans-serif;direction:rtl;box-shadow:0 8px 32px rgba(60,80,140,0.18);";
+    const title = document.createElement("p"); title.textContent = "✏️ تعديل التهنئة"; title.style.cssText = "color:#1a7a6e;margin-bottom:10px;font-weight:700;";
+    const ta = document.createElement("textarea"); ta.value = oldText;
+    ta.style.cssText = "width:100%;min-height:140px;background:rgba(240,244,251,0.8);border:1.5px solid #b5870a;border-radius:18px;padding:11px 14px;color:#1a2035;font-family:Cairo,Tajawal,sans-serif;resize:vertical;font-size:0.95rem;";
+    const btns = document.createElement("div"); btns.style.cssText = "display:flex;gap:10px;margin-top:12px;";
+    const saveBtn = document.createElement("button"); saveBtn.textContent = "حفظ";
+    saveBtn.style.cssText = "background:#b5870a;color:#fff;border:none;border-radius:36px;padding:8px 22px;font-weight:700;cursor:pointer;font-family:Cairo,Tajawal,sans-serif;";
+    const cancelBtn = document.createElement("button"); cancelBtn.textContent = "إلغاء";
+    cancelBtn.style.cssText = "background:rgba(60,80,140,0.06);color:#6e7a9c;border-radius:36px;padding:8px 16px;cursor:pointer;border:none;font-family:Cairo,Tajawal,sans-serif;";
+    saveBtn.onclick = function() { const newText = ta.value.trim(); if (newText) update(ref(db, "congrats/" + id), { text: newText, edited: true }); document.body.removeChild(overlay); };
+    cancelBtn.onclick = function() { document.body.removeChild(overlay); };
+    btns.appendChild(saveBtn); btns.appendChild(cancelBtn);
+    box.appendChild(title); box.appendChild(ta); box.appendChild(btns);
+    overlay.appendChild(box); document.body.appendChild(overlay);
+  };
+
+  /* ── Like ── */
+  window.toggleLike = function(id, currentLikes) {
+    const liked = getLikedSet();
+    if (liked.has(id)) {
+      liked.delete(id); saveLikedSet(liked);
+      update(ref(db, "congrats/" + id), { likes: Math.max(0, (currentLikes || 0) - 1) });
+    } else {
+      liked.add(id); saveLikedSet(liked);
+      update(ref(db, "congrats/" + id), { likes: (currentLikes || 0) + 1 });
+    }
+  };
+
+  /* ── Submit Admin Reply ── */
+  window.submitReply = function(id, taId) {
+    const ta = document.getElementById(taId);
+    if (!ta) return;
+    const text = ta.value.trim();
+    if (!text) return;
+    const replyRef = ref(db, "congrats/" + id + "/replies");
+    push(replyRef, { text, time: new Date().toLocaleString("ar-EG"), ts: Date.now(), type: "admin" });
+    ta.value = "";
+  };
+
+  /* ── Submit Commenter Reply (reply to researcher's reply) ── */
+  window.submitCommenterReply = function(id, taId, commenterName) {
+    const ta = document.getElementById(taId);
+    if (!ta) return;
+    const text = ta.value.trim();
+    if (!text) return;
+    const replyRef = ref(db, "congrats/" + id + "/replies");
+    push(replyRef, { text, time: new Date().toLocaleString("ar-EG"), ts: Date.now(), type: "commenter", name: commenterName || "زائر" });
+    ta.value = "";
+  };
+
+  /* ── Render list ── */
+  function renderList(snap) {
+    const container = document.getElementById("congrats-list");
+    const countEl = document.getElementById("congrats-count");
+    while (container.firstChild) container.removeChild(container.firstChild);
+
+    if (!snap || !snap.exists()) {
+      const p = document.createElement("p");
+      p.style.cssText = "text-align:center;color:#6e7a9c;padding:18px;";
+      p.textContent = "كن أول من يهنئ الباحث 🎉";
+      container.appendChild(p); countEl.textContent = ""; return;
+    }
+
+    const items = [];
+    snap.forEach(child => { const v = child.val(); v._id = child.key; items.push(v); });
+    items.reverse();
+    countEl.textContent = "◈ عدد التعليقات: " + items.length + " ◈";
+    const liked = getLikedSet();
+
+    for (const c of items) {
+      const isOwner = (c.token === myToken);
+      const wrap = document.createElement("div"); wrap.className = "c-item";
+
+      // Name
+      const nameSpan = document.createElement("span");
+      nameSpan.className = "c-name";
+      nameSpan.textContent = "👤 " + (c.name || "زائر");
+      wrap.appendChild(nameSpan);
+
+      // Text
+      const textDiv = document.createElement("div"); textDiv.className = "c-text"; textDiv.textContent = c.text || "";
+      wrap.appendChild(textDiv);
+
+      // Meta
+      const metaDiv = document.createElement("div"); metaDiv.className = "c-meta";
+      const timeSpan = document.createElement("span"); timeSpan.className = "c-time"; timeSpan.textContent = c.time || "";
+      metaDiv.appendChild(timeSpan);
+      if (c.edited) { const ed = document.createElement("span"); ed.style.cssText="font-size:0.67rem;color:#6e7a9c;"; ed.textContent = "· (معدّل)"; metaDiv.appendChild(ed); }
+      wrap.appendChild(metaDiv);
+
+      // ── Like row (left aligned, below comment text, before replies) ──
+      const likeRow = document.createElement("div"); likeRow.className = "c-like-row";
+      const cId0=c._id, cLikes0=c.likes||0;
+      const isLiked = liked.has(c._id);
+      const likeBtn = document.createElement("button");
+      likeBtn.className = "c-btn-like" + (isLiked ? " liked" : "");
+      likeBtn.innerHTML = (isLiked ? "❤️" : "🤍") + ' <span class="like-label">أعجبني</span> <span class="like-count">' + (c.likes || 0) + '</span>';
+      likeBtn.onclick = function() { window.toggleLike(cId0, cLikes0); };
+      likeRow.appendChild(likeBtn);
+      wrap.appendChild(likeRow);
+
+      // Replies
+      if (c.replies) {
+        const repliesWrap = document.createElement("div"); repliesWrap.className = "c-replies";
+        const hasAdminReply = Object.values(c.replies).some(r => r.type === "admin");
+
+        Object.values(c.replies).sort((a,b)=>a.ts-b.ts).forEach(r => {
+          const ri = document.createElement("div"); ri.className = "c-reply-item";
+          const rn = document.createElement("span"); rn.className = "c-reply-name";
+          rn.textContent = (r.type === "admin") ? "| الباحث |" : ("| " + (r.name || "زائر") + " |");
+          ri.appendChild(rn);
+          const rt = document.createElement("div"); rt.className = "c-reply-text"; rt.textContent = r.text; ri.appendChild(rt);
+          const rtime = document.createElement("div"); rtime.style.cssText="font-size:0.62rem;color:#6e7a9c;margin-top:4px;"; rtime.textContent = r.time || ""; ri.appendChild(rtime);
+          repliesWrap.appendChild(ri);
+        });
+
+        // Commenter can reply to researcher's reply (only if there's an admin reply, and this is their comment)
+        if (isOwner && hasAdminReply) {
+          const commenterName = c.name || "زائر";
+          const cReplyBtn = document.createElement("button"); cReplyBtn.className = "c-btn-commenter-reply"; cReplyBtn.textContent = "↩️ رد على الباحث";
+          const cTaId = "commenter-reply-ta-" + c._id;
+          const cId4 = c._id;
+          cReplyBtn.onclick = function() {
+            let existing = document.getElementById(cTaId + "-wrap");
+            if (existing) { existing.remove(); return; }
+            const rWrap = document.createElement("div"); rWrap.className = "commenter-reply-wrap"; rWrap.id = cTaId + "-wrap";
+            const rTa = document.createElement("textarea"); rTa.className = "commenter-reply-textarea"; rTa.id = cTaId; rTa.placeholder = "اكتب ردك على رد الباحث...";
+            const rBtn = document.createElement("button"); rBtn.className = "commenter-reply-send"; rBtn.textContent = "إرسال";
+            rBtn.onclick = function() { window.submitCommenterReply(cId4, cTaId, commenterName); };
+            rWrap.appendChild(rTa); rWrap.appendChild(rBtn); repliesWrap.appendChild(rWrap);
+          };
+          repliesWrap.appendChild(cReplyBtn);
+        }
+
+        wrap.appendChild(repliesWrap);
+      }
+
+      // Action Buttons row (edit, delete, admin-reply)
+      const btns = document.createElement("div"); btns.className = "c-btns";
+
+      if (isOwner) {
+        const editBtn = document.createElement("button"); editBtn.className = "c-btn-edit"; editBtn.textContent = "✏️ تعديل";
+        const cId=c._id, cText=c.text, cToken=c.token;
+        editBtn.onclick = function() { window.editCongrats(cId, cText, cToken); }; btns.appendChild(editBtn);
+      }
+
+      if (isOwner || isAdmin) {
+        const delBtn = document.createElement("button"); delBtn.className = "c-btn-del"; delBtn.textContent = "🗑️ حذف";
+        const cId2=c._id, cToken2=c.token;
+        delBtn.onclick = function() { window.deleteCongrats(cId2, cToken2); }; btns.appendChild(delBtn);
+      }
+
+      // Reply button (admin only)
+      if (isAdmin) {
+        const replyBtn = document.createElement("button"); replyBtn.className = "c-btn-reply"; replyBtn.textContent = "↩️ رد";
+        const taId = "reply-ta-" + c._id;
+        const cId3 = c._id;
+        replyBtn.onclick = function() {
+          let existing = document.getElementById(taId + "-wrap");
+          if (existing) { existing.remove(); return; }
+          const rWrap = document.createElement("div"); rWrap.className = "reply-input-wrap"; rWrap.id = taId + "-wrap";
+          const rTa = document.createElement("textarea"); rTa.className = "reply-textarea"; rTa.id = taId; rTa.placeholder = "اكتب ردك هنا...";
+          const rBtn = document.createElement("button"); rBtn.className = "reply-send-btn"; rBtn.textContent = "إرسال الرد";
+          rBtn.onclick = function() { window.submitReply(cId3, taId); };
+          rWrap.appendChild(rTa); rWrap.appendChild(rBtn); wrap.appendChild(rWrap);
+        };
+        btns.appendChild(replyBtn);
+      }
+
+      if (btns.children.length > 0) wrap.appendChild(btns);
+      container.appendChild(wrap);
+    }
+  }
+
+  onValue(congratsRef, snap => renderList(snap));
+
+  /* ── Admin UI ── */
+  function updateAdminUI() {
+    document.getElementById("admin-status").innerHTML =
+      '<span style="color:#1a7a6e;font-size:.78rem;">✅ أنت مسجل كمدير</span> ' +
+      '<button onclick="adminLogout()" style="background:rgba(192,69,74,0.12);border:1px solid #c0454a;color:#c0454a;border-radius:36px;padding:3px 10px;font-size:.68rem;cursor:pointer;margin-right:6px;">تسجيل خروج</button>';
+    document.getElementById("admin-toggle-btn").style.display = "none";
+  }
+
+  window.adminLogin = function() {
+    const pass = document.getElementById("admin-pass-input").value;
+    if (pass === ADMIN_PASSWORD) {
+      isAdmin = true; sessionStorage.setItem("admin_logged","yes");
+      document.getElementById("admin-login-box").style.display = "none";
+      document.getElementById("admin-pass-error").style.display = "none";
+      updateAdminUI();
+      onValue(congratsRef, snap => renderList(snap));
+    } else { document.getElementById("admin-pass-error").style.display = "block"; }
+  };
+
+  window.adminLogout = function() {
+    isAdmin = false; sessionStorage.removeItem("admin_logged");
+    document.getElementById("admin-status").innerHTML = "";
+    document.getElementById("admin-toggle-btn").style.display = "inline-block";
+    onValue(congratsRef, snap => renderList(snap));
+  };
+
+  window.showAdminLogin = function() {
+    document.getElementById("admin-login-box").style.display = "block";
+    document.getElementById("admin-toggle-btn").style.display = "none";
+    setTimeout(() => document.getElementById("admin-pass-input").focus(), 100);
+  };
+
+  window.cancelAdminLogin = function() {
+    document.getElementById("admin-login-box").style.display = "none";
+    document.getElementById("admin-toggle-btn").style.display = "inline-block";
+    document.getElementById("admin-pass-input").value = "";
+    document.getElementById("admin-pass-error").style.display = "none";
+  };
+
+  if (isAdmin) setTimeout(updateAdminUI, 300);
+</script>
+
+<script>
+  // Particles
+  for (let i = 0; i < 45; i++) {
+    const dot = document.createElement('div'); dot.className = 'particle';
+    const s = Math.random() * 4 + 2;
+    dot.style.width = s + 'px'; dot.style.height = s + 'px';
+    dot.style.left = Math.random() * 100 + 'vw';
+    dot.style.animationDuration = (Math.random() * 14 + 9) + 's';
+    dot.style.animationDelay = (Math.random() * 6) + 's';
+    document.getElementById('particles-bg').appendChild(dot);
+  }
+
+  // Countdown
+  const targetDate = new Date('2026-10-17T12:00:00').getTime();
+  function updateCountdown() {
+    const diff = targetDate - Date.now();
+    if (diff <= 0) {
+      document.getElementById('countdown-live').style.display = 'none';
+      document.getElementById('countdown-done').style.display = 'block'; return;
+    }
+    document.getElementById('days').innerText    = Math.floor(diff / 86400000).toString().padStart(2,'0');
+    document.getElementById('hours').innerText   = Math.floor((diff % 86400000) / 3600000).toString().padStart(2,'0');
+    document.getElementById('minutes').innerText = Math.floor((diff % 3600000) / 60000).toString().padStart(2,'0');
+    document.getElementById('seconds').innerText = Math.floor((diff % 60000) / 1000).toString().padStart(2,'0');
+  }
+  setInterval(updateCountdown, 1000); updateCountdown();
+
+  // Share
+  function shareOn(platform) {
+    const url = window.location.href;
+    const text = "تصفح الدعوة الإلكترونية لمناقشة رسالة الدكتوراه - محمد فرح متولي";
+    let s = '';
+    if (platform === 'facebook') s = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+    if (platform === 'x')        s = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+    if (platform === 'whatsapp') s = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(text + ' ' + url);
+    if (platform === 'telegram') s = 'https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+    window.open(s, '_blank');
+  }
+  window.shareOn = shareOn;
+</script>
+</body>
+</html>
